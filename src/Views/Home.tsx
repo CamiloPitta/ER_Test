@@ -1,10 +1,10 @@
-import React from 'react'
+import { RootLayout } from "../Layouts"
 
 const Home = () => {
   return (
-    <div>
+    <RootLayout>
       <h1>Home page</h1>
-    </div>
+    </RootLayout>
   )
 }
 

@@ -1,9 +1,11 @@
+import { RootLayout } from "../Layouts"
 
 const ProductDetail = () => {
   return (
-    <div>
-      <h1>Product Detail</h1>
-    </div>
+    <RootLayout>
+        <h1>Product Detail</h1>
+    </RootLayout>
+   
   )
 }
 
