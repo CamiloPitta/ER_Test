@@ -12,12 +12,11 @@ const GeneralProducts: FC<Props> = ({product}) => {
         <Link
             to={`/products/${product.id}`}
             className="hover:bg-secondary-light"
-            key={product.id}
         >
             <figure
                 className="flex flex-col items-center"
             >
-                <h4>{product.title}</h4>
+                <h4 className='w-64 text-center'>{product.title}</h4>
                 <img
                     src={product.image}
                     alt={'Image name' + product.title}
