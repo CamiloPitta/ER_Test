@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { APIResponse } from "../Interfaces/products";
 import { RootLayout } from "../Layouts"
 import { useQuery } from '@tanstack/react-query';
+import GeneralProducts from "../Components/products/GeneralProducts";
 
 
 
@@ -33,12 +35,23 @@ const Home = () => {
       </figure>
 
       {
-        data && data.map((product) => {
-          return (
-            <img src={product.image} alt="" key={product.id}/>
-          )
-          
-        })
+        data && (
+          <section
+            className="flex justify-evenly"
+          >
+            {
+              data.map((product) => {
+                return (
+                  
+                  <GeneralProducts 
+                  product={product}
+                  />
+
+                )
+              })
+            }
+          </section>
+        )
       }
 
     </RootLayout>
