@@ -3,6 +3,7 @@ import GeneralProducts from '../Components/products/GeneralProducts';
 import { fetchProducts } from "../API";
 import { useQuery } from '@tanstack/react-query';
 
+
 const Products = () => {
 
   const { data, isLoading, isError } = useQuery({
@@ -21,10 +22,10 @@ const Products = () => {
             {
               data.map((product) => {
                 return (
-                  
+
                   <GeneralProducts
-                  key = {product.id} 
-                  product={product}
+                    key={product.id}
+                    product={product}
                   />
 
                 )
@@ -34,8 +35,8 @@ const Products = () => {
         )
       }
     </RootLayout>
-      
-    
+
+
   )
 }
 
