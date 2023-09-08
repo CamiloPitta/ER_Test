@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <RootLayout>
       <figure
-        className="h-96 bg-cover"
+        className="h-96 bg-cover w-full"
         style={{ backgroundImage: 'url(//www.novoo-online.com/cdn/shop/files/1102_x_568-about_us.png?v=1673252682)' }}>
       </figure>
 

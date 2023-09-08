@@ -9,7 +9,6 @@ const ProductDetail = () => {
 
   const { id } = useParams<{ id: string }>()
 
-
   const { data, isLoading, isError } = useQuery({
     queryKey: ["products", id],
     queryFn: () => fetchProductById(id!)
@@ -40,7 +39,11 @@ const ProductDetail = () => {
 
           <QuantitySelector />
 
-          <p className='text-center'>{data?.description}</p>
+          <p className='text-center text-sm text-justify'>{data?.description}</p>
+
+          <button className="bg-secondary-dark text-primary-light p-2 rounded-md hover:bg-secondary-base transition ease-in duration-100">
+            Add To Cart
+          </button>
         </div>
       </section>
 
