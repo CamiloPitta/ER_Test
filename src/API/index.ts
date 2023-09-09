@@ -1,4 +1,4 @@
-import { APIResponse } from "../Interfaces/products"
+import { APIResponse } from "../interfaces/products"
 
 const baseURL = 'https://fakestoreapi.com/products'
 

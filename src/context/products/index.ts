@@ -1,6 +1,7 @@
-import { ProductContext } from "./ProductContext"
-
+import ProductContextProvider from "./ProductContextProvider";
+import { ProductContext } from "./ProductContext";
 
 export {
-    ProductContext
+    ProductContext,
+    ProductContextProvider
 }

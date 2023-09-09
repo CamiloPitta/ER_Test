@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { APIResponse } from '../../Interfaces/products';
+import { APIResponse } from '../../interfaces/products';
 import {FC} from 'react';
 
 

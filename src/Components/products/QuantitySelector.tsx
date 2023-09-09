@@ -1,42 +1,36 @@
-import { CircularButton } from '../buttons'
-import { useState } from 'react';
+import { FC } from 'react'
+import { CircularButton } from "../buttons"
 
-const QuantitySelector = () => {
+interface Props {
+    addCount: () => void 
+    substractCount: () => void
+    count: number
+}
 
-    const [count, setCount] = useState(1)
 
-    const addCount = () => {
-        setCount(prev => prev + 1)
-    }
 
-    const subtractCount = () => {
-        setCount(prev => {
-            if( prev > 1) return  prev - 1 
-            return prev
-            
-        }
-
-        )
-
-    }
-
+const QuantitySelector:FC<Props> = ({addCount, count, substractCount}) => {
+    
     return (
-        <div className="flex">
+        <div
+            className="flex text-center"
+        >
             <CircularButton
                 content="-"
-                title='Less'
-                onClick={subtractCount}
-
+                title="Less"
+                onClick={substractCount}
             />
-            <p className="bg-primary-light w-10 text-center ">{count}</p>
-
+            <p
+                className="bg-primary-light w-10"
+            >
+                {count}
+            </p>
             <CircularButton
-                roundedSide="right"
                 content="+"
-                title='More'
+                roundedSide="right"
+                title="More"
                 onClick={addCount}
             />
-
         </div>
     )
 }

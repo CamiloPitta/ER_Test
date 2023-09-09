@@ -1,22 +1,43 @@
-import {CustomNavLink} from '../links/';
-
+import { useContext } from "react"
+import { CustomNavLink } from '../links/';
+import { ProductContext } from "../../context/products"
 
 const Navbar = () => {
+  const { totalProducts, onOpenCartProducts } = useContext(ProductContext)
   return (
-   <header className='fixed w-full'>
-    <nav
-      className='bg-primary-light h-14 p-2 flex items-center justify-end pe-80 gap-4'
-    >
-      <CustomNavLink
-      to='/'
-      content='home'
-      />
-      <CustomNavLink
-      to='/products'
-      content='products'
-      />
-    </nav>
-   </header>
+    <header className='fixed w-full'>
+      <nav
+        className='bg-primary-light h-14 p-2 flex items-center justify-end pe-80 gap-4'
+      >
+        <CustomNavLink
+          to='/'
+          content='home'
+        />
+        <CustomNavLink
+          to='/products'
+          content='products'
+        />
+        {
+          // totalProducts > 0 && (
+            <button
+              className="border-2 p-1 rounded-full flex items-center justify-center relative"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/4175/4175027.png"
+                alt="icon cart"
+                className="h-5 w-5"
+              />
+              <div
+                className="h-4 w-4 p-3 rounded-full absolute bg-secondary-dark text-xs text-primary-light flex justify-center items-center -right-4 -top-2"
+                onClick={onOpenCartProducts}
+              >
+                {totalProducts}
+              </div>
+            </button>
+          // )
+        }
+      </nav>
+    </header>
   )
 }
 
