@@ -6,12 +6,12 @@ interface InfoCompany{
 }
 
 export const infoCompany: InfoCompany[] = [
-    {
-        id: 1,
-        href: 'https://endrock.software/',
-        logo: 'https://cdn-icons-png.flaticon.com/128/8304/8304806.png',
-        content: 'home' 
-    },
+    // {
+    //     id: 1,
+    //     href: 'https://endrock.software/',
+    //     logo: 'https://cdn-icons-png.flaticon.com/128/8304/8304806.png',
+    //     content: 'home' 
+    // },
     {
         id: 2,
         href: 'https://instagram.com/',

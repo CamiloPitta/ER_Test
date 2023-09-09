@@ -12,8 +12,8 @@ const CustomNavLink: FC<CustomNavLinkProps>  = ({content, to}) => {
         to={to}
         className={({isActive}) => {
             return `
-            text-primary-light text-2xl capitalize border-b-2 p-1 rounded-lg hover:bg-secondary-light
-            transition-colors ease-in duration-100 ${isActive ? 'bg-secondary-light': ''}
+            font-thin font-custom uppercase text-secondary-dark decoration-secondary-base decoration-1 underline-offset-8 text-base underline p-1 rounded-lg 
+            hover:text-primary-base transition-colors ease-in duration-100 ${isActive ? 'decoration-4 decoration-secondary-dark': ''}
             `
         }}
     

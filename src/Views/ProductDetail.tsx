@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { fetchProductById } from "../API";
 import { RootLayout } from "../Layouts"
 import { useQuery } from '@tanstack/react-query';
-import { CircularButton } from "../Components/buttons";
 import QuantitySelector from '../Components/products/QuantitySelector';
 
 const ProductDetail = () => {

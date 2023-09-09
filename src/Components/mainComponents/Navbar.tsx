@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
    <header className='fixed w-full'>
     <nav
-      className='bg-secondary-base h-14 p-2 flex items-center justify-center gap-4'
+      className='bg-primary-light h-14 p-2 flex items-center justify-end pe-80 gap-4'
     >
       <CustomNavLink
       to='/'

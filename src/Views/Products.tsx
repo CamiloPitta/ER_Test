@@ -14,10 +14,11 @@ const Products = () => {
 
   return (
     <RootLayout>
+      <h1 className="font-custom uppercase text-3xl p-10 text-secondary-dark w-4/5 ps-20">These are just for you:</h1>
       {
         data && (
           <section
-            className="flex flex-wrap justify-evenly gap-4"
+            className="flex flex-wrap justify-evenly gap-4 w-4/5"
           >
             {
               data.map((product) => {

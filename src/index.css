@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-style: normal;
+    src: url("https://fonts.shopifycdn.com/montserrat/montserrat_n6.7a3c341961dc23aaabcc116124b80f2a7abec1a2.woff2?&hmac=b92922e1683cc0012e34c7bf8312b5012a94a53fc8c072e1f67c774308ea2f2a") format("woff2"), url("https://fonts.shopifycdn.com/montserrat/montserrat_n6.2c97c1a692c63ad09ab0635cb73b1939c5f417c0.woff?&hmac=8669c660350573f86fd9449c033c017f38297b619f249ae75e106208f636918b") format("woff"); }
