@@ -76,7 +76,7 @@ const ProductDetail = () => {
             {data.description}
           </p>
           <button
-            className="capitalize rounded-lg p-2 bg-secondary-dark text-primary-light text-sm hover:bg-secondary-base transition-colors ease-in duration-100"
+            className="capitalize rounded-lg p-2 bg-secondary-dark text-primary-light text-lg hover:bg-secondary-base transition-colors ease-in duration-100 w-48 m-6 h-12"
             onClick={addProductToCart}
           >
             add to cart

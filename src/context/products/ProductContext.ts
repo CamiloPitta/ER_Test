@@ -11,6 +11,8 @@ interface ProductContextValues {
     onOpenCartProducts: () => void,
     removeProduct: (id: number) => void,
     substractProduct: (id: number, quantity: number) => void
+    closeCart: () => void;
+    successfulPurchase: () => void
 }
 
 
@@ -29,4 +31,6 @@ export const ProductContext = createContext<ProductContextValues>({
     onOpenCartProducts: () => {},
     removeProduct: () => {},
     substractProduct: () => {},
+    closeCart: () => {},
+    successfulPurchase: () => {}
 }) 

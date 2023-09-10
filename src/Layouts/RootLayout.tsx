@@ -14,7 +14,8 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
                 {children}
             </main>
             {
-                totalProducts > 0 && isCartProductsOpen && (
+                totalProducts >= 0 && isCartProductsOpen && (
+                // isCartProductsOpen(
                     <CartProducts />
                 )
             }

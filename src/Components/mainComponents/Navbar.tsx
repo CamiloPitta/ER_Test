@@ -4,6 +4,10 @@ import { ProductContext } from "../../context/products"
 
 const Navbar = () => {
   const { totalProducts, onOpenCartProducts } = useContext(ProductContext)
+  const handleOpenCartClick = () => {
+    onOpenCartProducts();
+    console.log('cart clicked')
+  };
   return (
     <header className='fixed w-full'>
       <nav
@@ -21,6 +25,7 @@ const Navbar = () => {
           // totalProducts > 0 && (
             <button
               className="border-2 p-1 rounded-full flex items-center justify-center relative"
+              onClick={handleOpenCartClick}
             >
               <img
                 src="https://cdn-icons-png.flaticon.com/128/4175/4175027.png"
@@ -29,7 +34,7 @@ const Navbar = () => {
               />
               <div
                 className="h-4 w-4 p-3 rounded-full absolute bg-secondary-dark text-xs text-primary-light flex justify-center items-center -right-4 -top-2"
-                onClick={onOpenCartProducts}
+        
               >
                 {totalProducts}
               </div>

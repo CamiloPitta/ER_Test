@@ -16,7 +16,7 @@ const CircularButton:FC<Props> = ({onClick, title, content, roundedSide = 'left'
   return (
   
     <button
-      className={`bg-secondary-light w-8 h-6 flex justify-center items-center hover:bg-secondary-base transition-colors duration-100 active:bg-secondary-dark ${classNameRounded}`}
+      className={`bg-primary-base w-8 h-6 flex justify-center items-center hover:bg-secondary-dark transition-colors duration-100 active:bg-secondary-dark ${classNameRounded}`}
       title = {title}
       onClick={onClick}
     >

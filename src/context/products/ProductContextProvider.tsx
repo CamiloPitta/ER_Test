@@ -8,6 +8,7 @@ const ProductContextProvider:FC<PropsWithChildren> = ({children}) => {
   const [products, setProducts] = useState<ProductWithCount[]>([])
   const [isCartProductsOpen, setIsCartProductsOpen] = useState(false)
 
+
   const totalProducts = useMemo(() => {
     const sum = products.reduce((previous, current ) => {
       return previous + current.count
@@ -24,6 +25,7 @@ const ProductContextProvider:FC<PropsWithChildren> = ({children}) => {
 
 
   const addProduct = (product: APIResponse, quantity: number) => {
+    
       setProducts(currentProducts => {
         const isProductInProducts = currentProducts.some(prod => prod.id === product.id)
         if (isProductInProducts) {
@@ -63,12 +65,23 @@ const ProductContextProvider:FC<PropsWithChildren> = ({children}) => {
   }
 
   const onOpenCartProducts = () => {
+    console.log('open')
     setIsCartProductsOpen(true)
   }
   
   const onCloseCartProducts = () => {
     setIsCartProductsOpen(false)
   }
+
+  const closeCart = () => {
+    setIsCartProductsOpen(false);
+  };
+
+  const successfulPurchase = () => {
+    setProducts([])
+  }
+
+  
 
   return (
     <ProductContext.Provider
@@ -81,7 +94,10 @@ const ProductContextProvider:FC<PropsWithChildren> = ({children}) => {
         onCloseCartProducts,
         onOpenCartProducts,
         removeProduct,
-        substractProduct 
+        substractProduct, 
+        closeCart,
+        successfulPurchase
+        
       }}
     >
       {children}
