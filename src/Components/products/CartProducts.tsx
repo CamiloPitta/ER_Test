@@ -1,11 +1,11 @@
-import { useContext, useState } from "react"
+import { useContext} from "react"
 import { ProductContext } from "../../context/products"
 import ProductInCart from "./ProductInCart"
 import { Link } from "react-router-dom"
 
 const CartProducts = () => {
 
-  const { products, totalPrice, isCheckoutClicked, isContinuePurchasing, closeCart, successfulPurchase, continuePurchasing } = useContext(ProductContext)
+  const { products, totalPrice, isCheckoutClicked, closeCart, successfulPurchase, continuePurchasing } = useContext(ProductContext)
   // const [isPurchaseSuccessful, setIsPurchaseSuccessful] = useState(false);
 
   // const handleCheckout = () => {
@@ -41,21 +41,6 @@ const CartProducts = () => {
 
       </section>
 
-      {/* {products.length === 0 && isPurchaseSuccessful == true ? (
-        <p className="text-2xl text-primary-dark font-extrabold text-center">
-          Purchase successful!
-        </p>
-      ) : (
-        <>
-          <button 
-          className="bg-secondary-dark my-4 text-primary-light h-10 rounded-md hover:bg-secondary-base transition-colors ease-in duration-100"
-            onClick={handleCheckout}
-          >Checkout</button>
-        </>
-
-        
-      )} */}
-
       {products.length !== 0 ?
         <button
         className="bg-secondary-dark my-4 text-primary-light h-10 w-full rounded-md hover:bg-secondary-base transition-colors ease-in duration-100"
@@ -85,34 +70,8 @@ const CartProducts = () => {
         </div>
         : ''}
 
-
-
-
-
-
-
-
-
-
-
-
-
     </aside>
   )
 }
 
 export default CartProducts
-
-
-
-
-
-
-
-
-
-// ----------------------------------------
-
-
-
-
