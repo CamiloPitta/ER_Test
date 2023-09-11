@@ -6,12 +6,11 @@ const Navbar = () => {
   const { totalProducts, onOpenCartProducts } = useContext(ProductContext)
   const handleOpenCartClick = () => {
     onOpenCartProducts();
-    console.log('cart clicked')
   };
   return (
-    <header className='fixed w-full'>
+    <header className='fixed w-full z-10'>
       <nav
-        className='bg-primary-light h-14 p-2 flex items-center justify-end pe-80 gap-4'
+        className='bg-primary-light h-14 p-2 flex items-center justify-end mobile:pe-20 tablet:pe-80 gap-4'
       >
         <CustomNavLink
           to='/'
@@ -24,7 +23,7 @@ const Navbar = () => {
         {
           // totalProducts > 0 && (
             <button
-              className="border-2 p-1 rounded-full flex items-center justify-center relative"
+              className="border-2 p-1 rounded-full flex items-center justify-center relative hover:border-secondary-dark hover:bg-secondary-light transition-colors ease-in"
               onClick={handleOpenCartClick}
             >
               <img

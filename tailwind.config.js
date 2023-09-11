@@ -5,7 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      mobile: '320px',
+      tablet: '640px',
+      laptop: '1024px'
+    },
     extend: {
+      keyframes: {
+        "fade": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" }
+        }
+      },
+      animation: {
+        "fade": "fade 0.5s ease-in"
+      },
       colors: {
         // primary: {
         //   light: '#fafafa',

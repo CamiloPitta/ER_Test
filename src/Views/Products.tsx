@@ -2,6 +2,7 @@ import { RootLayout } from "../Layouts"
 import GeneralProducts from '../Components/products/GeneralProducts';
 import { fetchProducts } from "../API";
 import { useQuery } from '@tanstack/react-query';
+import { useEffect } from "react";
 
 
 const Products = () => {
@@ -12,13 +13,18 @@ const Products = () => {
   })
   console.log(data, isLoading, isError)
 
+  useEffect(() => {
+    console.log('test')
+    // ChangeDocumentTitle('ER - Shop - Products')
+  }, [])
+
   return (
     <RootLayout>
-      <h1 className="font-custom uppercase text-3xl p-10 text-secondary-dark w-4/5 ps-20">These are just for you:</h1>
+      <h1 className="font-custom uppercase text-3xl p-10 text-secondary-dark text-center tablet:self-start tablet:ps-40">These are just for you:</h1>
       {
         data && (
           <section
-            className="flex flex-wrap justify-evenly gap-4 w-4/5"
+            className="flex flex-wrap justify-center gap-4"
           >
             {
               data.map((product) => {

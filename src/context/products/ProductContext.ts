@@ -9,7 +9,6 @@ interface ProductContextValues {
     isCheckoutClicked: boolean,
     isContinuePurchasing: boolean,
     addProduct: (product: APIResponse, quantity: number) => void,
-    onCloseCartProducts: () => void,
     onOpenCartProducts: () => void,
     removeProduct: (id: number) => void,
     substractProduct: (id: number, quantity: number) => void
@@ -24,19 +23,5 @@ export interface ProductWithCount extends APIResponse {
 }
 
 
-export const ProductContext = createContext<ProductContextValues>({
-    isCartProductsOpen: false,
-    products: [],
-    totalPrice: 0,
-    totalProducts: 0,
-    isCheckoutClicked: false,
-    isContinuePurchasing: false,
-    addProduct: () => {},
-    onCloseCartProducts: () => {},
-    onOpenCartProducts: () => {},
-    removeProduct: () => {},
-    substractProduct: () => {},
-    closeCart: () => {},
-    successfulPurchase: () => {},
-    continuePurchasing: () => {}
-}) 
+export const ProductContext = createContext<ProductContextValues>({} as ProductContextValues) 
+

@@ -74,9 +74,9 @@ const ProductContextProvider: FC<PropsWithChildren> = ({ children }) => {
     setIsCartProductsOpen(true)
   }
 
-  const onCloseCartProducts = () => {
-    setIsCartProductsOpen(false)
-  }
+  // const onCloseCartProducts = () => {
+  //   setIsCartProductsOpen(false)
+  // }
 
   const closeCart = () => {
     setIsCartProductsOpen(false);
@@ -104,7 +104,7 @@ const continuePurchasing = () => {
         isCheckoutClicked,
         isContinuePurchasing,
         addProduct,
-        onCloseCartProducts,
+        // onCloseCartProducts,
         onOpenCartProducts,
         removeProduct,
         substractProduct,

@@ -11,7 +11,8 @@ const GeneralProducts: FC<Props> = ({product}) => {
     return (
         <Link
             to={`/products/${product.id}`}
-            className="hover:scale-105 ease-in duration-200"
+            className="hover:scale-105 ease-in duration-200 animate-fade"
+            title={`See details ${product.title}`}
         >
             <figure
                 className="flex flex-col items-center p-6 shadow-xl rounded-xl"

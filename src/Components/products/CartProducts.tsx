@@ -6,21 +6,16 @@ import { Link } from "react-router-dom"
 const CartProducts = () => {
 
   const { products, totalPrice, isCheckoutClicked, closeCart, successfulPurchase, continuePurchasing } = useContext(ProductContext)
-  // const [isPurchaseSuccessful, setIsPurchaseSuccessful] = useState(false);
-
-  // const handleCheckout = () => {
-  //   successfulPurchase();
-  //   setIsPurchaseSuccessful(true);
-  // };
 
   return (
-    <aside className="w-64 fixed h-screen top-0 right-0 bg-secondary-light p-2 flex flex-col gap-2 overflow-y-auto">
+    <aside className="z-20 w-64 fixed h-full top-0 right-0 bg-secondary-light p-2 flex flex-col gap-2 overflow-y-auto animate-fade">
       <section>
-        <div>
+        <div className="flex justify-end p-2">
 
           <button
             onClick={closeCart}
-            className="text-lg flex justify-end hover:underline py-2 ps-40 font-custom font-thin"
+            className="text-lg hover:underline font-custom font-thin"
+            title = 'Close cart'
           >
             Close x
           </button>
@@ -58,7 +53,7 @@ const CartProducts = () => {
       {isCheckoutClicked == true && products.length === 0 ?
         <div>
           <p className="text-2xl text-primary-dark font-bold text-center"
-          >Conratulations! Purchase successful</p>
+          >Congratulations! Purchase successful</p>
           <Link
           to={'/products'}
           >

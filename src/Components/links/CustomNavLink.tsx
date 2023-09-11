@@ -16,7 +16,7 @@ const CustomNavLink: FC<CustomNavLinkProps>  = ({content, to}) => {
             hover:text-primary-base transition-colors ease-in duration-100 ${isActive ? 'decoration-4 decoration-secondary-dark': ''}
             `
         }}
-    
+        title={`Visit ${content} page`}
     >
         {content}
     </NavLink>

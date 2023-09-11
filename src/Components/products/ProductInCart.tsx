@@ -26,7 +26,7 @@ const ProductInCart: FC<Props> = ({ product }) => {
     return (
 
             <div
-                className="p-2 flex flex-col items-center gap-2 shadow-sm shadow-secondary-light relative"
+                className="p-2 flex flex-col items-center gap-2 shadow-sm shadow-secondary-light relative animate-fade"
             >
 
                 <figure
@@ -58,11 +58,11 @@ const ProductInCart: FC<Props> = ({ product }) => {
                 />
                 <hr className="w-full" />
                 <button
-                    className="absolute top-2 right-2 h-5 w-5 rounded-full bg-primary-light flex justify-center items-center hover:bg-secondary-light transition-colors ease-in duration-100"
+                    className="absolute top-2 right-2 h-5 w-5 rounded-full bg-secondary-dark  flex justify-center items-center hover:bg-secondary-base transition-colors ease-in duration-100"
                     title={`delete product ${product.title}`}
                     onClick={deleteProduct}
                 >
-                    x
+                    <span className="text-xs font-semibold text-primary-light">x</span>
                 </button>
             </div>
         

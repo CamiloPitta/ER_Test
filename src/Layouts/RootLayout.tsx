@@ -9,13 +9,12 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
         <>
             <Navbar />
             <main
-                className="min-h-[calc(100vh-144px)] pt-14 flex flex-col items-center justify-center"
+                className="min-h-[calc(100vh-144px)] pt-14 flex flex-col items-center justify-center animate-fade"
             >
                 {children}
             </main>
             {
                 totalProducts >= 0 && isCartProductsOpen && (
-                // isCartProductsOpen(
                     <CartProducts />
                 )
             }

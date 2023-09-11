@@ -4,7 +4,7 @@ import { CustomLinkIcon } from '../links';
 const Footer = () => {
   return (
     <footer
-      className="bg-secondary-dark flex flex-wrap gap-28 justify-center p-2 items-center"
+      className="bg-secondary-dark flex flex-wrap gap-y-5  gap-x-28 justify-center p-2 items-center"
     >
       <figure
         className="flex flex-col items-center shadow-sm shadow-secondary-light gap-2 w-56 p-2 rounded-xl"

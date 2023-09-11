@@ -41,11 +41,11 @@ const ProductDetail = () => {
   return (
     <RootLayout>
       <section
-        className="flex flex-wrap w-8/12 border-2 p-4 justify-evenly items-center"
+        className="flex flex-wrap gap-4 tablet:border-2 tablet:p-4 justify-evenly items-center mt-4 mb-4 rounded-xl animate-fade"
       >
         <figure>
           <img
-            className="h-96 w-96"
+            className="mobile:h-80 w-auto tablet:h-96"
             src={data.image}
             alt=""
           />
@@ -78,6 +78,7 @@ const ProductDetail = () => {
           <button
             className="capitalize rounded-lg p-2 bg-secondary-dark text-primary-light text-lg hover:bg-secondary-base transition-colors ease-in duration-100 w-48 m-6 h-12"
             onClick={addProductToCart}
+            title={`Add ${data.title} to your cart`}
           >
             add to cart
           </button>

@@ -14,6 +14,7 @@ const CustomLinkIcon:FC<Props> = ({content, to, icon}) => {
    to= {to}
    target="_blank"
    className="group transition-all ease-linear duration-100"
+   title={`Our ${content} site`}
    >
     <figure className="flex gap-4 items-center justify-center ">
         <img 
