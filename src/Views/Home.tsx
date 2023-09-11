@@ -2,6 +2,11 @@ import { RootLayout } from "../Layouts"
 import { useQuery } from '@tanstack/react-query';
 import GeneralProducts from "../Components/products/GeneralProducts";
 import { fetchProducts } from "../API";
+import { useEffect } from 'react';
+import { ChangeDocumentTitle } from "../utils";
+import { ProductSkeleton } from "../Components/skeletons";
+import { ErrorPage } from ".";
+
 
 const Home = () => {
 
@@ -10,9 +15,11 @@ const Home = () => {
     queryFn: () => fetchProducts(4)
   })
 
-  console.log(data, isLoading, isError)
+  useEffect(() => {
+    ChangeDocumentTitle('ER - Shop - Home')
+  }, [])
 
-  if (isError) throw new Error('Fetching error')
+  if (isError) return <ErrorPage />
 
   return (
     <RootLayout>
@@ -31,7 +38,9 @@ const Home = () => {
       >
         {
           isLoading
-            ? <span className="animate-pulse">Is Loading...</span>
+            ? Array.from([1, 2, 3, 4]).map(elem => (
+              <ProductSkeleton key={elem} />
+            ))
             : data.map((product) => {
               return (
 

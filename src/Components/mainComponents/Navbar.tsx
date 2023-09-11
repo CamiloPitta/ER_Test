@@ -3,9 +3,10 @@ import { CustomNavLink } from '../links/';
 import { ProductContext } from "../../context/products"
 
 const Navbar = () => {
-  const { totalProducts, onOpenCartProducts } = useContext(ProductContext)
+  const { totalProducts, toggleCartProducts } = useContext(ProductContext)
   const handleOpenCartClick = () => {
-    onOpenCartProducts();
+    // onOpenCartProducts();
+    toggleCartProducts()
   };
   return (
     <header className='fixed w-full z-10'>

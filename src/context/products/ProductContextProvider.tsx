@@ -94,6 +94,10 @@ const continuePurchasing = () => {
   setIsCartProductsOpen(false)
 }
 
+const toggleCartProducts = () => {
+  setIsCartProductsOpen(prev => !prev)
+}
+
   return (
     <ProductContext.Provider
       value={{
@@ -110,7 +114,8 @@ const continuePurchasing = () => {
         substractProduct,
         closeCart,
         successfulPurchase,
-        continuePurchasing
+        continuePurchasing,
+        toggleCartProducts
 
       }}
     >

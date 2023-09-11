@@ -15,6 +15,7 @@ interface ProductContextValues {
     closeCart: () => void;
     successfulPurchase: () => void,
     continuePurchasing: () => void
+    toggleCartProducts: () => void
 }
 
 
