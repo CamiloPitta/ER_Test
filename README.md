@@ -2,9 +2,9 @@
 
 ### Project overview
 
-This project shows a protitype of a functional basic e-commerce website. It is built using React.js and Typescript. Vite was used to create the base project and ReactRouter as the the routing solution.
+This project shows a protitype of a functional basic e-commerce website. It is built using React.js and Typescript; also, Vite was used to create the base project and React Router as the the routing solution. Tailwind CSS was used for the styling, and TanStack Query to manage API queries and improve the navigation experience.
 
-Tailwind CSS was used for the styling. Additionally, TanStack Query was used to manage API queries and improve the navigation experience.
+Its deploy can be seen on https://er-e-commerce.netlify.app/
 
 ### Proyect details
 
